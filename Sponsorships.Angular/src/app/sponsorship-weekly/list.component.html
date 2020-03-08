@@ -1,0 +1,80 @@
+<!-- START PAGE COVER -->
+<div class="row bg-title clearfix page-title">
+    <div class="col-12 col-lg-4">
+        <h4 class="page-title">
+            <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+            Sponsorships Weekly
+        </h4>
+    </div>
+    <div class="col-12 col-lg-8">
+        <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+            <li><a [routerLink]="['/dashboard']"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li>Sponsorships</li>
+            <li class="active">Weekly</li>
+        </ol>
+    </div>
+</div>
+<!-- END PAGE COVER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-xl-12 m-b-10">
+            <div class="bg-white padding-5 white-box h-100">
+                <div class="data-table-wrapper">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12 col-xl-12 text-md-right">
+                            <div class="data-table-filter mb-2 float-sm-left float-lg-none d-lg-inline-block" style="white-space:nowrap">
+                                <label for="search1">Search:</label>
+                                <select class="custom-select ml-2" style="width:250px"
+                                        [(ngModel)]="selectedRaviSabhaId" (change)="onRaviSabhaChange($event.target.value)">
+                                    <option *ngFor="let item of raviSabhas" [value]="item.Id">{{item.SabhaDateWithDesc}}</option>
+                                </select>
+                                <button type="button" class="btn btn-circle btn-primary ml-2" [routerLink]="['/sponsorship-weekly', 0]">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" [ngBusy]="busyList">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-sm table-striped table-bordered data-table table-checkable"
+                                       cellspacing="0"
+                                       role="grid">
+                                    <thead>
+                                        <tr>
+                                            <th width="50px"></th>
+                                            <th class="text-left"></th>
+                                            <th class="text-left">Sponsor</th>
+                                            <th class="text-left">Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of items">
+                                            <td class="actions text-center">
+                                                <a [routerLink]="['/sponsorship-weekly', item.Id]" class="text-info" title="Edit">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </td>
+                                            <td style="white-space:nowrap;text-align:left;"
+                                                [style.text-decoration]=" item.IsDeleted==true ? 'line-through' : 'none'"
+                                                [innerHTML]="item.SponsorshipTypeIcon">
+                                            </td>
+                                            <td style="white-space:nowrap;text-align:left;"
+                                                [style.text-decoration]=" item.IsDeleted==true ? 'line-through' : 'none'">
+                                                {{item.SponsorDetail}}
+                                            </td>
+                                            <td class="text-left"
+                                                [style.text-decoration]=" item.IsDeleted==true ? 'line-through' : 'none'">
+                                                {{item.SabhaShortDate}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

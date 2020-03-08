@@ -1,0 +1,329 @@
+html, body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divContent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.slideTitle {
+    font-family: 'Bookman Old Style';
+    text-decoration: underline;
+    font-size: 40px;
+    font-weight: bold;
+    color: navy;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.slideTab, .slideTab > a {
+    font-family: 'Bookman Old Style';
+    text-decoration: underline;
+    font-size: 10px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+    text-decoration: none;
+}
+
+.nb-theme-default ol, .nb-theme-default ul {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.tableActivities {
+    margin-left: 50px;
+    margin-top: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Bookman Old Style';
+    /*color: brown;*/
+    /*color:#304771;*/
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+    white-space: nowrap;
+    width: 100%;
+}
+
+.foyerContent {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.foyerTable {
+    vertical-align: top;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Bookman Old Style';
+    white-space: nowrap;
+    width: 100%;
+}
+
+.foyerTableBrown {
+    color: brown;
+}
+
+.foyerTableWhite {
+    color: White;
+}
+
+.foyerTableGreen {
+    color: Green;
+}
+
+.foryer-shayona-ad {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsorship-Grand {
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Green.jpg');
+}
+
+.sponsorship-Platinum {
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Blue.jpg');
+}
+
+.sponsorship-Diamond {
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Purple.jpg');
+}
+
+.sponsorship-Gold {
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Orange.jpg');
+}
+
+.sponsorship-Silver {
+    color: black;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Gray.jpg');
+}
+
+.sponsorship-In-Kind {
+    background: linear-gradient(to right, #da22ff, #9733ee);
+}
+
+.sponsorship-rc-Title {
+    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+    font-family: 'Bookman Old Style';
+    font-size: 30px;
+    font-weight: bold;
+    
+    background: purple;
+    text-align: center;
+    display: inline-block;
+}
+
+.sponsorship-rc-Category {
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 50%;
+    height: auto;
+    font-family: 'Bookman Old Style';
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.sponsorship-rc-Category-content {
+    font-size: 21px;
+}
+
+.sponsorship-rc-Amount {
+    width: 50%;
+    font-size: 29px;
+}
+
+.sponsorship-rc-Amount-span {
+    vertical-align: middle;
+    line-height: normal;
+    height: 100%;
+    vertical-align: middle;
+}
+
+th {
+    vertical-align: top;
+    text-decoration: underline;
+}
+
+.sponsorshipOpportunityAmount {
+    width: 150px;
+}
+
+.bulletPoints {
+    display: list-item;
+    margin-left: 50px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td {
+    vertical-align: top;
+}
+
+.ageRange {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: normal;
+    text-decoration: unset;
+}
+
+.scheduleTiming {
+    color: black;
+    font-size: 0.95rem;
+}
+
+.scheduleShape {
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border: 3px solid white;
+    color: darkred;
+}
+
+th.scheduleShape {
+    border-radius: 0px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-left: 0px;
+    border-top: 0px;
+    color: darkred;
+}
+
+.balMandal {
+    background: linear-gradient(to bottom, #ff99cc, #feb47b);
+    border-left: 0px;
+}
+
+.kishorMandal {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.yuvakMandal {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sayuktaMandal {
+    background: linear-gradient(to bottom, #a8edea, #96e6a1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-right: 0px;
+}
+
+.allMandal {
+    background: linear-gradient(to bottom, #fceabb, #f8b500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.tabs-below > .nav-tabs {
+    border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: block;
+}
+
+.tabs-bottom > .nav-tabs {
+    border-top: 1px solid #ddd;
+}
+
+.tabs-bottom > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.tabs-bottom > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabs-bottom > .nav-tabs > .active > a,
+.tabs-bottom > .nav-tabs > .active > a:hover,
+.tabs-bottom > .nav-tabs > .active > a:focus {
+    border-color: transparent #ddd #ddd #ddd;
+}
+
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.tab .nav-tabs {
+    display: inline-block;
+    background: linear-gradient(#304771, white, #304771);
+    border-radius: 50px;
+    border: none;
+    padding: 1px;
+}
+
+.tab .nav-tabs li {
+    float: none;
+    display: inline-block;
+    position: relative;
+}
+
+.tab .nav-tabs li a {
+    font-size: 18px;
+    font-weight: 700;
+    background: none;
+    color: #304771;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+.tab .nav-tabs li a:hover {
+    color: #fff;
+    background: #304771;
+    border: none;
+}
+
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover {
+    border: none;
+    color: #fff;
+    background: #304771;
+}

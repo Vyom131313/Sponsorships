@@ -1,0 +1,385 @@
+html, body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divContent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.slideTitle {
+    font-family: 'Bookman Old Style';
+    text-decoration: underline;
+    font-size: 45px;
+    font-weight:bold;
+    color: navy;
+    /*color:#304771;*/
+    /*font-size: 50px;*/
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+}
+
+.slideTab, .slideTab > a {
+    font-family: 'Bookman Old Style';
+    text-decoration: underline;
+    /*color: brown;*/
+    /*color:#304771;*/
+    font-size: 20px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+    text-decoration: none;
+}
+
+.nb-theme-default ol, .nb-theme-default ul {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.tableActivities {
+    margin-left: 50px;
+    margin-top: 20px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Bookman Old Style';
+    /*color: brown;*/
+    /*color:#304771;*/
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);
+    white-space: nowrap;
+    width: 100%;
+}
+
+.foyerContent {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.foyerTable {
+    vertical-align: top;
+    text-align: left;
+    /*font-size: 30px;*/
+    font-size: 43px;
+    font-family: 'Bookman Old Style';
+    /*color: brown;*/
+    /*color:#304771;*/
+    /*text-shadow: 2px 8px 6px rgba(0,0,0,0.2),0px -5px 35px rgba(255,255,255,0.3);*/
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+.foyerTableBrown {
+    color: brown;
+    /*color:#304771;*/
+}
+
+.foyerTableWhite {
+    color: White;
+    /*color:#304771;*/
+}
+
+.foyerTableGreen {
+    color: Green;
+    /*color:#304771;*/
+}
+
+.foryer-shayona-ad {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsorship-Grand {
+    /*background: linear-gradient(to right, green, #4ca2cd);*/
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Green.jpg');
+}
+
+.sponsorship-Platinum {
+    /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Blue.jpg');
+}
+
+.sponsorship-Diamond {
+    /*background: linear-gradient(to right, #4ecdc4, #556270);*/
+    /*background: linear-gradient(to right, #9733EE, #DA22FF);*/
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Purple.jpg');
+}
+
+.sponsorship-Gold {
+    /*background: linear-gradient(to right, #004ff9, #fff94c);*/
+    /*background: linear-gradient(to right, #004ff9, #aa076b);
+    color:gold;*/
+    color: brown;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Orange.jpg');
+}
+
+.sponsorship-Silver {
+    /*
+    background: linear-gradient(to right, #304352, #d7d2cc);
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    background: linear-gradient(to right, #536976, #292e49); 
+    */
+    /*background: linear-gradient(to right, #cc2b5e, #753a88);*/
+    
+    /*background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    color: silver;
+    */
+    color:black;
+    background-image: url('/../../assets/img/Foyer PPT Backgrounds/Gray.jpg');
+}
+
+.sponsorship-In-Kind {
+    /*background: linear-gradient(to right, #1e130c, #9a8478);*/
+    background: linear-gradient(to right, #da22ff, #9733ee);
+}
+
+.sponsorship-rc-Title {
+    border-radius: 25px;
+    padding: 12px;
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+    font-family: 'Bookman Old Style';
+    font-size: 34px;
+    font-weight: bold;
+
+    background: purple;
+    color: white;
+    text-align:center;
+    display:inline-block;
+}
+
+.sponsorship-rc-Category {
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 50%;
+    height: auto;
+    font-family: 'Bookman Old Style';
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.sponsorship-rc-Category-content {
+    font-size: 21px;
+}
+
+.sponsorship-rc-Amount {
+    width: 50%;
+    font-size: 29px;
+}
+
+.sponsorship-rc-Amount-span {
+    vertical-align: middle;
+    line-height: normal;
+    height:100%;
+    vertical-align:middle;
+}
+
+/*.sponsorship-rc-Category-Grand {
+    background: #73AD21;
+}
+
+.sponsorship-rc-Category-Platinum {
+    background: orange;
+}
+
+.sponsorship-rc-Category-Diamond {
+    background: green;
+}
+
+.sponsorship-rc-Category-Gold {
+    background: blue;
+}
+
+.sponsorship-rc-Category-Silver {
+    background: brown;
+}*/
+
+th {
+    vertical-align: top;
+    text-decoration: underline;
+}
+
+.sponsorshipOpportunityAmount {
+    width: 150px;
+}
+
+.bulletPoints {
+    display: list-item;
+    margin-left: 50px;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+td {
+    vertical-align: top;
+}
+
+.ageRange {
+    color: black;
+    font-size: 0.95rem;
+    font-weight: normal;
+    text-decoration: unset;
+}
+
+.scheduleTiming {
+    color: black;
+    font-size: 0.95rem;
+}
+
+.scheduleShape {
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    /*border-radius: 5px;*/
+    border: 3px solid white;
+    color: darkred;
+}
+
+th.scheduleShape {
+    border-radius: 0px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-left: 0px;
+    border-top: 0px;
+    color: darkred;
+}
+
+.balMandal {
+    background: linear-gradient(to bottom, #ff99cc, #feb47b);
+    border-left: 0px;
+}
+
+.kishorMandal {
+    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.yuvakMandal {
+    background: linear-gradient(to bottom, #fbc2eb, #a6c1ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.sayuktaMandal {
+    background: linear-gradient(to bottom, #a8edea, #96e6a1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-right: 0px;
+}
+
+.allMandal {
+    background: linear-gradient(to bottom, #fceabb, #f8b500); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.tabs-below > .nav-tabs {
+    border-bottom: 0;
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: none;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+    display: block;
+}
+
+.tabs-bottom > .nav-tabs {
+    border-top: 1px solid #ddd;
+}
+
+.tabs-bottom > .nav-tabs > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+
+.tabs-bottom > .nav-tabs > li > a {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tabs-below > .nav-tabs > li > a:hover,
+.tabs-below > .nav-tabs > li > a:focus {
+    border-top-color: #ddd;
+    border-bottom-color: transparent;
+}
+
+.tabs-bottom > .nav-tabs > .active > a,
+.tabs-bottom > .nav-tabs > .active > a:hover,
+.tabs-bottom > .nav-tabs > .active > a:focus {
+    border-color: transparent #ddd #ddd #ddd;
+}
+
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.tab .nav-tabs {
+    display: inline-block;
+    /*background: #fff;*/
+    background: linear-gradient(#304771, white, #304771);
+    border-radius: 50px;
+    border: none;
+    padding: 1px;
+}
+
+.tab .nav-tabs li {
+    float: none;
+    display: inline-block;
+    position: relative;
+}
+
+.tab .nav-tabs li a {
+    font-size: 20px;
+    font-weight: 700;
+    background: none;
+    /*color: brown;*/
+    color: #304771;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+.tab .nav-tabs li a:hover {
+    /*color: brown;*/
+    color: #fff;
+    background: #304771;
+    border: none;
+}
+
+.tab .nav-tabs li.active a,
+.tab .nav-tabs li.active a:focus,
+.tab .nav-tabs li.active a:hover {
+    border: none;
+    /*color: brown;*/
+    color: #fff;
+    background: #304771;
+}

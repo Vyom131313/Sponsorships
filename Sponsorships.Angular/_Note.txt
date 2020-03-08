@@ -1,0 +1,117 @@
+﻿======== Install/Upgrade NPM ======
+https://medium.com/@jeroenouw/upgrade-to-angular-6-4520e46c682b
+rmdir /Q /S "folder with spaces in the name"
+npm uninstall -g @angular/cli
+npm install -g @angular/cli
+npm cache clean --force
+ng update @angular/cli --force
+npm install @angular/animations@latest @angular/common@latest @angular/compiler@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/platform-server@latest @angular/router@latest --save
+npm install @angular-devkit/build-angular@latest @angular/compiler-cli@latest @angular/language-service --save-dev
+npm install core-js@latest zone.js@latest --save
+npm install @types/jasmine@latest @types/node@latest codelyzer@latest karma@latest karma-chrome-launcher@latest karma-cli@latest karma-jasmine@latest karma-jasmine-html-reporter@latest jasmine-core@latest jasmine-spec-reporter@latest protractor@latest tslint@latest --save-dev
+npm install typescript@2.7.2 --save-dev
+npm install rxjs@latest rxjs-compat@latest --save
+npm install rxjs-tslint@latest --save-dev
+rxjs-5-to-6-migrate -p src/tsconfig.app.json
+npm install webpack@latest --save-dev
+
+======== Build and Run ======
+ng serve
+ng build
+ng build --prod --aot
+ng build --prod --output-hashing none
+ng build --prod --output-hashing none --extract-css=false
+
+
+********* P1 *********
+* Hyperlink on each tab title
+* New Repository pattern
+* Exception Handling (2)
+* Report of 2018
+* Add data by Sponsors 
+* Sponsorship Form Data Upload
+
+********* P2 *********
+* Hide 2018 dates  (1)
+* Menu highlight issue (1)
+* CRUD : Users (1)
+* CRUD : UserAccess (1)
+* Authentication (2) : http://jasonwatmore.com/post/2018/11/22/angular-7-role-based-authorization-tutorial-with-example
+* Authorization (2)
+* Understand Subscribe/Promise
+* Pattern
+
+********* P3 *********
+* Data Table
+* Sponsorship reminder email template
+* Error: client:174 Invalid Host/Origin header (1)
+* Merge different css files while bundling (1)
+
+********* Completed *************
+** CRUD : SystemConfig
+** CRUD : Ravi Sabha
+** CRUD : Sponsors
+** CRUD : RaviSabhaSponsors
+** CRUD : Sponsorships Weekly
+** CRUD : Sponsorships Monthly
+** CRUD : Sponsorships Annual
+** Remove Unnecessary classes
+
+*************************** Initial Setup ***************************
+* Prepare package.json
+	- npm istall angular2-toaster	
+	- npm istall rxjs
+* Install NPM
+	- npm install
+* Install necessary pages:
+	- npm install bootstrap
+	- npm install Angular2-busy
+
+* Navigation : 
+	- Left Navbar Toggle
+	- Top Navbar Toggle
+	- Left Navbar Toggle
+	- Breadcumb component
+
+* Common Services
+	- _UtilityService	
+* CRUD XXX :
+	- xxx.service
+	- List View
+	- Searching
+	- Sorting
+	- Model Dialog
+	- Create
+	- Update
+	- Delete
+	- Validation
+	- Breadcumb component
+
+* Custom Font
+* Authention & Authorization
+* CRUD : Users
+* CRUD : UserAccesses
+* Login Screen
+* Role based access functionality
+* Deployment
+	- Assets Bundling and Minification
+	- Packaging
+	- Default Index page
+
+========= Add Ravi Sabha of 2019=====
+
+DECLARE @Year AS INT = 2019,
+	@FirstDateOfYear DATE = DATEADD(yyyy, @Year - 1900, 0) ,
+	@LastDateOfYear DATE = DATEADD(yyyy, @Year - 1900 + 1, 0)
+
+-- Creating Query to Prepare Year Data
+;WITH cte AS (
+	SELECT 1 AS DayID, @FirstDateOfYear AS FromDate, 	DATENAME(dw, @FirstDateOfYear) AS Dayname
+	UNION ALL
+	SELECT cte.DayID + 1 AS DayID,	DATEADD(d, 1 ,cte.FromDate),	DATENAME(dw, DATEADD(d, 1 ,cte.FromDate)) AS Dayname
+	FROM cte WHERE DATEADD(d,1,cte.FromDate) < @LastDateOfYear
+)
+
+--INSERT INTO dbo.RaviSabha (SabhaDate, Description) 
+SELECT FromDate, 'Ravi Sabha' FROM CTE WHERE DayName IN ('Sunday') OPTION (MaxRecursion 370)
+===========================================

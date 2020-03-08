@@ -1,0 +1,37 @@
+<div class="container-fluid" *ngIf="currentSlide>=0" style="width:100%;padding-left:0px;padding-right:0px;text-align:center">
+    <img src="assets/img/Foyer PPT Backgrounds/{{FOYER_BACKGROUND}}.jpg" style="width:100%;height:100%">
+    <div *ngFor="let slide of slides;let i = index">
+        <div class="divContent" *ngIf="currentSlide==(i)">
+            <div class="sponsorship-{{slide.SponsorshipType}}" style="width:100vw;height:100vw;">
+                <div class="row" style="height:100%;">
+                    <div class="col-xs-12">
+                        <!-- tabs -->
+                        <div class="tab tabbable tabs-bottom" role="tabpanel" style="height:100%">
+                            <div class="tab-content" style="height:94%">
+                                <div class="tab-pane active" id="home">
+                                    <div class="slideTitle">
+                                        {{slide.Title}}
+                                    </div>
+                                    <div class="foyerContent" [innerHTML]="slide.Content">
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="nav nav-tabs" role="tablist" style="position:fixed; width:100%; left:10px; right:10px;bottom:0; width:auto;">
+                                <li role="presentation" *ngFor="let tab of slides;let j = index"
+                                    [class.active]="tab.TabTitle==slide.TabTitle"
+                                    [ngStyle]="{'display':tab.TabTitle === '' ? 'none' : 'visible' }">
+                                    <a href="#Section1" aria-controls="home" class="slideTab" role="tab" data-toggle="tab" [innerHTML]="tab.TabTitle"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->

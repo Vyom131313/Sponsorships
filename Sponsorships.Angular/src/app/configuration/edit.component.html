@@ -1,0 +1,54 @@
+<!-- START PAGE COVER -->
+<div class="row bg-title clearfix page-title">
+    <div class="col-12 col-lg-3">
+        <h4 class="page-title">
+            <i class="fa fa-gears" aria-hidden="true"></i>
+            {{title}}
+        </h4>
+    </div>
+    <div class="col-12 col-lg-9">
+        <ol class="breadcrumb pl-0 pr-0 float-lg-right">
+            <li><a [routerLink]="['/dashboard']"><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
+            <li>Admin</li>
+            <li><a [routerLink]="['/configuration']">Configuration</a></li>
+            <li class="active">{{action}}</li>
+        </ol>
+    </div>
+</div>
+<!-- END PAGE COVER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-xl-12">
+            <div class="bg-white padding-25 h-100" [ngBusy]="busyLoading">
+                <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" required 
+                               name="Name" #Name="ngModel" [(ngModel)]="vm.Name" 
+                               [ngClass]="{ 'is-invalid': f.submitted && Name.invalid }" />
+                    </div>
+                    <div class="form-group" *ngIf="vm.ValidValues == null || vm.ValidValues.length ==0">
+                        <label for="Value">Value</label>
+                        <input type="text" class="form-control" placeholder="Value" required
+                               name="Value" #Value="ngModel" [(ngModel)]="vm.Value" 
+                               [ngClass]="{ 'is-invalid': f.submitted && Value.invalid }" />
+                    </div>
+
+                    <div class="form-group" *ngIf="vm.ValidValues != null && vm.ValidValues.length >0 ">
+                        <label for="Value">Value</label>
+                        <select class="custom-select" placeholder="Value" 
+                               name="Value" #Value="ngModel" [(ngModel)]="vm.Value" 
+                               [ngClass]="{ 'is-invalid': f.submitted && Value.invalid }">
+                            <option *ngFor="let item of vm.ValidValuesArray" [value]="item">{{item}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group text-right" [ngBusy]="busySaving">
+                        <button type="submit" class="btn btn-success ripple text-uppercase btn-raised" ><span>Submit</span><i class="fa fa-check right" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-dark ripple text-uppercase btn-raised m-l-10" (click)="goBack()"><span>Back</span><i class="fa fa-caret-left right" aria-hidden="true"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

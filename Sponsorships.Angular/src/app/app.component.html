@@ -1,0 +1,154 @@
+
+<div id="main-container" class="main-container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="scroll-wrapper">
+            <div class="navbar nav-title">
+                <a href="index.html" class="site-title navbar-brand">
+                    <!--<span class="icon-admin-logo1"></span>-->
+                    <div class="profile-pic">
+                        <img src="./assets/img/favicon.png" alt="Profile picture" class="profile-img" 
+                             style="width:unset;max-width:50px;max-height:50px;">
+                    </div>
+                </a>
+            </div>
+            <div class="nav toggle">
+                <a href="javascript:void(0)" id="sidebar-menu-toggle" class="btn btn-circle ripple">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+            <div class="profile clearfix">
+                <!--<div class="profile-pic">
+                    <img src="./assets/img/favicon.png" alt="Profile picture" class="rounded-circle profile-img" style="width:unset">
+                </div>-->
+                <div class="profile-info">
+                    <h2 style="font-weight:bold;color:green;font-size:20px">Sponsorships</h2>
+                </div>
+            </div>
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main-menu-wrapper">
+                <div class="menu-section">
+                    <ul class="nav side-menu flex-column">
+                        <li class="nav-item">
+                            <a routerLink="/dashboard" routerLinkActive="active" title="Dashboard">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item has-child opened">
+                            <a href="javascript:void(0);" class="ripple" title="Sponsorships">
+                                <i class="fa fa-dollar" aria-hidden="true"></i>
+                                <span>Sponsorships</span>
+                                <span class="fa fa-chevron-right"></span>
+                            </a>
+                            <ul class="nav child-menu">
+                                <li class="nav-item">
+                                    <a routerLink="/sponsorship-weekly" routerLinkActive="active" title="Sponsorships Weekly">
+                                        <i class="fa fa-wikipedia-w" aria-hidden="true"></i>
+                                        <span>Weekly</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/sponsorship-monthly" routerLinkActive="active" title="Sponsorships Monthly">
+                                        <i class="fa fa-maxcdn" aria-hidden="true"></i>
+                                        <span>Monthly</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/sponsorship-annual" routerLinkActive="active" title="Sponsorships Annual">
+                                        <i class="fa fa-yahoo" aria-hidden="true"></i>
+                                        <span>Annual</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/report" routerLinkActive="active" title="Sponsorships Report">
+                                        <i class="fa fa-file-text" aria-hidden="true"></i>
+                                        <span>Reports</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/foyer-tv" routerLinkActive="active" target="_blank" title="Foyer TV">
+                                        <i class="fa fa-tv" aria-hidden="true"></i>
+                                        <span>Foyer TV</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/foyer-tv-1080p" routerLinkActive="active" target="_blank" title="Foyer TV">
+                                        <i class="fa fa-tv" aria-hidden="true"></i>
+                                        <span>Foyer TV 1080p</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-child">
+                            <a href="javascript:void(0);" class="ripple" title="Admin">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <span>Admin</span>
+                                <span class="fa fa-chevron-right"></span>
+                            </a>
+                            <ul class="nav child-menu">
+                                <li class="nav-item">
+                                    <a routerLink="/configuration" routerLinkActive="active" title="Configurations">
+                                        <i class="fa fa-gears" aria-hidden="true"></i>
+                                        <span>Configurations</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/ravi-sabha" routerLinkActive="active" title="Ravi Sabhas">
+                                        <i class="fa fa-hashtag" aria-hidden="true"></i>
+                                        <span>Ravi Sabha</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/sponsor" routerLinkActive="active" title="Sponsors">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <span>Sponsors</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a routerLink="/users" routerLinkActive="active" title="User & Accesses">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        <span>User & Accesses</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /sidebar menu -->
+        </div>
+    </div>
+    <!-- /Sidebar -->
+
+    <div id="content-wrapper" class="content-wrapper">
+        <!-- Topbar -->
+        <header class="header" id="topbar">
+            <nav class="header-menu">
+                <div class="nav toggle">
+                    <a href="javascript:void(0)" id="menu-toggle" class="ripple">
+                        <span class="bars"></span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- /Topbar -->
+        <!-- page content -->
+        <div id="main-content" class="main-content small-gutter" role="main">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /page content -->
+        <!-- footer content -->
+        <footer class="footer" id="footer">
+            <!--<div class="float-right">
+                Admin Template by <a href="javascript:void(0)" class="company-name text-theme">
+                <span class="icon-admin-logo"></span>
+                </a>
+            </div>-->
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
